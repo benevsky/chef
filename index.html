@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мухаммад Магомедов — Шеф-повар &amp; Бренд-шеф</title>
+<meta name="description" content="Мухаммад Магомедов — шеф-повар и бренд-шеф с 9+ летним опытом. Опыт Michelin-кухни. Алматы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+[data-theme="dark"]{--bg:#0a0a0a;--bg-elev:#111;--bg-card:#141414;--border:#1e1e1e;--border-s:#2a2a2a;--text:#ededed;--text-dim:#b0b0b0;--text-faint:#787878;--accent:#f0f0f0;--accent-dim:#999;--card-hover:#191919;--grain:0.025;--glow:rgba(240,240,240,.06);--glow-s:rgba(240,240,240,.11);}
+[data-theme="light"]{--bg:#f3f3f1;--bg-elev:#eaeae8;--bg-card:#e2e2e0;--border:#cecece;--border-s:#b5b5b3;--text:#0f0f0f;--text-dim:#505050;--text-faint:#909090;--accent:#0f0f0f;--accent-dim:#404040;--card-hover:#d8d8d6;--grain:0.012;--glow:rgba(0,0,0,.04);--glow-s:rgba(0,0,0,.08);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:15px}
+body{background:var(--bg);color:var(--text);font-family:'Geist',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s,color .35s}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:var(--grain);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{text-decoration:none;color:inherit}
+[data-lang="zh"] body,[data-lang="zh"] h1,[data-lang="zh"] h2,[data-lang="zh"] h3,[data-lang="zh"] p,[data-lang="zh"] span,[data-lang="zh"] div,[data-lang="zh"] a{font-family:"Noto Sans SC",system-ui,sans-serif}
+[data-lang="zh"] .brand-name,[data-lang="zh"] .brand-sub,[data-lang="zh"] .sec-label,[data-lang="zh"] .nav-desktop a,[data-lang="zh"] .abf-label,[data-lang="zh"] .proj-num,[data-lang="zh"] .ticker-item{font-family:"Noto Sans SC",monospace}
+.container{max-width:1180px;margin:0 auto;padding:0 32px}
+header{position:sticky;top:0;z-index:800;border-bottom:1px solid var(--border);transition:background .35s,border-color .35s}
+[data-theme="dark"] header{background:rgba(10,10,10,.88);backdrop-filter:blur(16px)}
+[data-theme="light"] header{background:rgba(243,243,241,.92);backdrop-filter:blur(16px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:13px 32px;max-width:1180px;margin:0 auto;gap:20px}
+.brand-name{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text);white-space:nowrap}
+.brand-sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin-top:2px}
+.nav-desktop{display:flex;gap:22px;align-items:center;flex:1;justify-content:center}
+.nav-desktop a{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);white-space:nowrap;transition:color .2s}
+.nav-desktop a:hover{color:var(--accent)}
+.header-controls{display:flex;align-items:center;gap:12px}
+
+.lang-select{display:none;background:var(--bg-card);border:1px solid var(--border-s);color:var(--text-dim);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.04em;padding:6px 28px 6px 10px;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23787878' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;min-width:64px}
+.lang-select:focus{border-color:var(--accent-dim)}
+[data-theme="dark"] .lang-select{color-scheme:dark}
+.lang-sw{display:flex;gap:3px}
+.lang-btn{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--text-faint);background:none;border:none;cursor:pointer;padding:4px 7px;border-radius:2px;transition:color .2s,background .2s}
+.lang-btn.active{color:var(--text);background:var(--bg-card)}
+.theme-btn{background:none;border:1px solid var(--border-s);color:var(--text-dim);cursor:pointer;padding:5px 9px;border-radius:2px;font-size:13px;line-height:1;transition:all .2s}
+.theme-btn:hover{border-color:var(--accent-dim);color:var(--text)}
+.hamburger-btn{display:none;background:none;border:1px solid var(--border-s);color:var(--text-dim);cursor:pointer;padding:5px 10px;border-radius:2px;font-size:16px;line-height:1;transition:all .2s}
+.nav-mobile{display:none;flex-direction:column;border-top:1px solid var(--border);background:var(--bg)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);padding:14px 24px;border-bottom:1px solid var(--border);transition:color .2s}
+.nav-mobile a:hover{color:var(--accent)}
+.ticker-wrap{overflow:hidden;border-bottom:1px solid var(--border);background:var(--bg-elev);padding:9px 0;cursor:default}
+.ticker{display:flex;gap:72px;width:max-content;animation:ticker-run 48s linear infinite}
+.ticker:hover{animation-play-state:paused}
+.ticker-item{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;display:flex;align-items:center;gap:10px}
+.ticker-item::before{content:'◆';color:var(--accent);font-size:5px}
+@keyframes ticker-run{to{transform:translateX(-50%)}}
+.hero-location-tag{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);border:1px solid var(--border-s);background:var(--bg-elev);padding:6px 14px;display:inline-flex;align-items:center;gap:8px;margin-bottom:24px}
+.hero{padding:90px 0 0;border-bottom:1px solid var(--border);position:relative;overflow:hidden;min-height:92vh;display:flex;flex-direction:column;align-items:center}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;opacity:.32}
+.hero-fade{position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse 80% 70% at 50% 40%,transparent 20%,var(--bg) 85%)}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,var(--glow-s) 0%,transparent 65%);top:30%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:1;animation:glow-pulse 5s ease-in-out infinite}
+@keyframes glow-pulse{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}}
+.hero .container{position:relative;z-index:2;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:12px;background:var(--bg-card);border:1px solid var(--border-s);padding:7px 18px;border-radius:40px;margin-bottom:36px}
+.hb-text{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:.06em}
+.hb-text strong{color:var(--text)}
+@keyframes wordReveal{from{opacity:0;filter:blur(12px);transform:translateY(14px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+.hero-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(44px,7.2vw,90px);font-weight:400;line-height:1.04;letter-spacing:-.03em;margin-bottom:28px;max-width:900px}
+.hero-h1 .hl{display:block;opacity:0;animation:wordReveal .7s cubic-bezier(.2,.8,.2,1) forwards}
+.hero-h1 .hl:nth-child(1){animation-delay:.08s}
+.hero-h1 .hl:nth-child(2){animation-delay:.22s}
+.hero-h1 .hl:nth-child(3){animation-delay:.36s}
+.hero-h1 em{font-style:italic;font-weight:300;color:var(--accent)}
+.hero-lead{font-size:17px;line-height:1.7;color:var(--text-dim);max-width:620px;margin-bottom:40px;opacity:0;animation:wordReveal .7s cubic-bezier(.2,.8,.2,1) .48s forwards}
+.hero-lead strong{color:var(--text);font-weight:500}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:52px;opacity:0;animation:wordReveal .7s cubic-bezier(.2,.8,.2,1) .6s forwards}
+.btn-prim{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:14px 30px;background:var(--accent);color:var(--bg);border:1px solid var(--accent);cursor:pointer;transition:all .25s;display:inline-block}
+.btn-prim:hover{background:transparent;color:var(--accent)}
+.btn-sec{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:14px 30px;background:transparent;color:var(--text-dim);border:1px solid var(--border-s);cursor:pointer;transition:all .25s;display:inline-block}
+.btn-sec:hover{border-color:var(--accent-dim);color:var(--text)}
+.hero-stats-strip{display:flex;gap:0;border:1px solid var(--border);margin-bottom:0;width:100%;opacity:0;animation:wordReveal .7s cubic-bezier(.2,.8,.2,1) .72s forwards}
+.hss-item{flex:1;padding:22px 20px;border-right:1px solid var(--border);text-align:center}
+.hss-item:last-child{border-right:none}
+.hss-val{font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,2.4vw,30px);font-weight:400;letter-spacing:-.02em;line-height:1;margin-bottom:6px}
+.hss-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
+.hero-panel{width:100%;border-left:1px solid var(--border);border-right:1px solid var(--border);background:var(--bg-elev);position:relative;overflow:hidden;margin-top:56px;opacity:0;animation:wordReveal .9s cubic-bezier(.2,.8,.2,1) .9s forwards}
+.hp-bar{display:flex;align-items:center;gap:16px;padding:12px 24px;border-bottom:1px solid var(--border);background:var(--bg-card)}
+.hp-dots{display:flex;gap:6px}
+.hp-dot{width:10px;height:10px;border-radius:50%;background:var(--border-s)}
+.hp-title-bar{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint);flex:1;text-align:center}
+.hp-online{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--text-dim)}
+.hp-alive{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:alive-blink 2s ease-in-out infinite}
+@keyframes alive-blink{0%,100%{opacity:1}50%{opacity:.35}}
+.hp-metrics{padding:36px 44px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px 56px;position:relative}
+.hp-metrics::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,var(--border-s) 1px,transparent 1px);background-size:28px 28px;opacity:.4;pointer-events:none}
+.hpm{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.hpm-icon{width:22px;height:22px;color:var(--accent);opacity:.7;margin-bottom:4px;flex-shrink:0}
+.hpm-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);display:flex;justify-content:space-between;align-items:center}
+.hpm-lbl span{color:var(--text-dim);font-size:10px;font-weight:600}
+.hpm-track{height:2px;background:var(--border-s);overflow:hidden}
+.hpm-fill{height:100%;background:var(--accent);transform-origin:left;transform:scaleX(0);animation:bar-grow 1.4s cubic-bezier(.2,.8,.2,1) 1.2s forwards}
+@keyframes bar-grow{to{transform:scaleX(1)}}
+section{padding:100px 0;border-bottom:1px solid var(--border)}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,4.5vw,56px);font-weight:400;line-height:1.08;letter-spacing:-.025em;margin-bottom:20px;max-width:900px}
+h2 em{font-style:italic;font-weight:300;color:var(--accent)}
+.sec-lead{font-size:17px;color:var(--text-dim);max-width:720px;margin-bottom:56px;line-height:1.72}
+.manifesto{padding:120px 0;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.mfst-bg{position:absolute;top:50%;left:-1%;transform:translateY(-50%);font-family:'Fraunces',Georgia,serif;font-size:clamp(90px,20vw,260px);font-weight:700;letter-spacing:-.04em;color:var(--text);opacity:.03;pointer-events:none;user-select:none;white-space:nowrap;line-height:1}
+.manifesto .container{position:relative;z-index:1}
+.mfst-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,5vw,64px);font-weight:400;line-height:1.1;letter-spacing:-.025em;margin-bottom:32px;max-width:820px}
+.mfst-title em{font-style:italic;font-weight:300;color:var(--accent)}
+.mfst-text{font-size:17px;color:var(--text-dim);max-width:680px;line-height:1.75;margin-bottom:52px}
+.mfst-text strong{color:var(--text);font-weight:500}
+.mfst-facts{display:flex;border:1px solid var(--border-s)}
+.mfst-fact{flex:1;padding:28px 26px;border-right:1px solid var(--border-s)}
+.mfst-fact:last-child{border-right:none}
+.mf-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:6px}
+.mf-desc{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-faint)}
+.about-grid{display:grid;grid-template-columns:320px 1fr 260px;gap:52px;align-items:start}
+.about-photo{display:inline-block;max-width:100%}.about-photo img{width:auto;max-width:100%;height:auto;display:block;border:1px solid var(--border-s)}
+.about-photo-caption{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);padding:10px 14px;border:1px solid var(--border-s);border-top:none;background:var(--bg-elev)}
+.about-text p{font-size:16px;color:var(--text-dim);line-height:1.8;margin-bottom:18px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--text);font-weight:500}
+.about-facts{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border-s);border:1px solid var(--border-s)}
+.ab-fact{background:var(--bg-card);padding:22px 20px;transition:background .25s}
+.ab-fact:hover{background:var(--card-hover)}
+.abf-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:7px}
+.abf-val{font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:400;line-height:1;letter-spacing:-.02em;color:var(--accent);margin-bottom:4px}
+.abf-val-sm{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--accent);margin-bottom:4px;line-height:1.4}
+.abf-desc{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint)}
+.proj-section-wrap{margin-top:56px}
+.proj-cat{margin-bottom:52px}
+.proj-cat:last-child{margin-bottom:0}
+.proj-cat-header{display:flex;align-items:center;gap:16px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.proj-cat-name{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text)}
+.proj-cat-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:.1em;background:var(--bg-card);border:1px solid var(--border);padding:2px 9px}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s)}
+.proj-card{background:var(--bg-card);padding:34px 30px;position:relative;overflow:hidden;transition:background .3s;color:var(--text)}
+.proj-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .38s cubic-bezier(.4,0,.2,1)}
+.proj-card:hover{background:var(--card-hover)}
+.proj-card:hover::before{height:100%}
+.proj-inner{transition:transform .32s cubic-bezier(.4,0,.2,1)}
+.proj-card:hover .proj-inner{transform:translateX(5px)}
+.proj-num{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--accent-dim);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.badge-michelin{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;font-weight:600;background:rgba(255,215,0,.12);color:#d4af37;border:1px solid rgba(255,215,0,.28);padding:3px 9px}
+.badge-ceo{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;font-weight:600;background:rgba(100,220,100,.1);color:#5cb85c;border:1px solid rgba(100,220,100,.22);padding:3px 9px}
+.proj-title{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;margin-bottom:6px;letter-spacing:-.01em;line-height:1.2}
+.proj-location{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:12px}
+.proj-desc{color:var(--text-dim);font-size:14px;line-height:1.68;margin-bottom:14px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.proj-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);background:var(--bg-elev);padding:5px 10px;border:1px solid var(--border);letter-spacing:.04em}
+.svc-value-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s);margin:40px 0 56px}
+.svs-item{background:var(--bg-card);padding:28px 28px;transition:background .25s}
+.svs-item:hover{background:var(--card-hover)}
+.svs-num{font-family:'Fraunces',Georgia,serif;font-size:clamp(24px,2.5vw,36px);font-weight:300;letter-spacing:-.03em;line-height:1;color:var(--text);margin-bottom:8px}
+.svs-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);line-height:1.6}
+@media(max-width:960px){.svc-value-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.svc-value-strip{grid-template-columns:1fr 1fr}}
+.svc-section{margin-top:0}
+.svc-cat{margin-bottom:40px}
+.svc-cat:last-child{margin-bottom:0}
+.svc-cat-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint);margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.svc-cat-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s)}
+.svc-grid-2{grid-template-columns:repeat(2,1fr)}
+.svc-card{background:var(--bg-card);padding:36px 32px;position:relative;overflow:hidden;transition:background .3s;cursor:default;display:flex;flex-direction:column}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .38s cubic-bezier(.4,0,.2,1)}
+.svc-card:hover{background:var(--card-hover)}
+.svc-card:hover::before{height:100%}
+.svc-inner{transition:transform .32s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;flex:1}
+.svc-card:hover .svc-inner{transform:translateX(5px)}
+.svc-icon{font-size:22px;margin-bottom:16px;opacity:.7}
+.svc-title{font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em;line-height:1.28}
+.svc-desc{font-size:13px;color:var(--text-dim);line-height:1.68;flex:1;padding-bottom:18px}
+.svc-price{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--text);padding-top:16px;border-top:1px solid var(--border);margin-top:auto}
+.svc-price-note{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--text-faint);margin-top:5px;font-weight:400}
+.edu-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s);margin-top:56px}
+.edu-card{background:var(--bg-card);padding:40px 32px;position:relative;overflow:hidden;transition:background .3s;cursor:default}
+.edu-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .38s cubic-bezier(.4,0,.2,1)}
+.edu-card:hover{background:var(--card-hover)}
+.edu-card:hover::before{height:100%}
+.edu-inner{transition:transform .32s cubic-bezier(.4,0,.2,1)}
+.edu-card:hover .edu-inner{transform:translateX(5px)}
+.edu-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--accent-dim);margin-bottom:16px}
+.edu-years{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:400;letter-spacing:-.02em;color:var(--accent);margin-bottom:8px}
+.edu-uni{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:500;margin-bottom:8px;letter-spacing:-.01em;line-height:1.3}
+.edu-loc{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.edu-spec{font-size:13px;color:var(--text-dim);line-height:1.6}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s)}
+.why-card{background:var(--bg-card);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s;cursor:default}
+.why-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .38s cubic-bezier(.4,0,.2,1)}
+.why-card:hover{background:var(--card-hover)}
+.why-card:hover::before{height:100%}
+.why-inner{transition:transform .32s cubic-bezier(.4,0,.2,1)}
+.why-card:hover .why-inner{transform:translateX(5px)}
+.why-icon{font-size:24px;margin-bottom:18px;opacity:.7}
+.why-title{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em}
+.why-desc{font-size:14px;color:var(--text-dim);line-height:1.68}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+.portfolio-item{aspect-ratio:1;overflow:hidden;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;transition:border-color .25s}
+.portfolio-item:hover{border-color:var(--accent-dim)}
+.portfolio-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(.4,0,.2,1);display:block}
+.portfolio-item:hover img{transform:scale(1.07)}
+.portfolio-placeholder{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-faint);letter-spacing:.12em;text-transform:uppercase;text-align:center;line-height:2}
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:32px}
+.ci-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);margin-bottom:6px}
+.ci-val{font-size:17px;color:var(--text)}
+.ci-val a{transition:color .2s}
+.ci-val a:hover{color:var(--accent-dim)}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-g{display:flex;flex-direction:column;gap:7px}
+.f-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
+.f-in,.f-ta{background:var(--bg-card);border:1px solid var(--border-s);color:var(--text);font-family:'Geist',sans-serif;font-size:14px;padding:11px 15px;outline:none;width:100%;transition:border-color .2s}
+.f-ta{resize:vertical;min-height:110px}
+.f-in:focus,.f-ta:focus{border-color:var(--accent-dim)}
+.f-in::placeholder,.f-ta::placeholder{color:var(--text-faint)}
+
+.lead-magnet{background:var(--bg-card);border:1px solid var(--border-s);margin-top:56px;position:relative;overflow:hidden}
+.lead-magnet::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent)}
+.lm-top{padding:44px 48px 36px;border-bottom:1px solid var(--border)}
+.lm-badge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint);border:1px solid var(--border-s);background:var(--bg-elev);display:inline-block;padding:5px 14px;margin-bottom:16px}
+.lm-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px;color:var(--text)}
+.lm-format{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint)}
+.lm-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-s)}
+.lm-item{background:var(--bg-card);padding:28px 32px;display:flex;gap:18px;align-items:flex-start;transition:background .25s}
+.lm-item:hover{background:var(--card-hover)}
+.lm-check{color:var(--accent);font-size:17px;font-weight:600;flex-shrink:0;margin-top:2px}
+.lm-item strong{color:var(--text);display:block;margin-bottom:6px;font-size:14px;font-weight:500}
+.lm-item div{font-size:13px;color:var(--text-dim);line-height:1.68}
+.lm-cta-row{display:flex;gap:14px;padding:36px 48px;border-top:1px solid var(--border);flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;transition:all .2s;font-weight:600}
+.btn-wa:hover{background:#20b857}
+.btn-tg{display:inline-flex;align-items:center;gap:10px;background:#2AABEE;color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;transition:all .2s;font-weight:600}
+.btn-tg:hover{background:#1e99d6}
+.ci-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s);margin-top:32px}
+.ci-cell{background:var(--bg-card);padding:24px 24px}
+.ci-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px}
+.ci-val{font-size:14px;color:var(--text)}
+.ci-val a{transition:color .2s}
+.ci-val a:hover{color:var(--accent-dim)}
+@media(max-width:960px){.lm-grid{grid-template-columns:1fr}.lm-top{padding:32px 32px 28px}.lm-cta-row{padding:28px 32px}.ci-row{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.lm-cta-row{flex-direction:column}.btn-wa,.btn-tg{justify-content:center}.ci-row{grid-template-columns:1fr 1fr}.lm-item{padding:20px 24px}}
+.last-cta{padding:120px 0;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.last-cta-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;opacity:.2}
+.last-cta-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,var(--glow-s) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:glow-pulse 5s ease-in-out infinite}
+.last-cta .container{position:relative;z-index:1}
+.last-cta-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint);margin-bottom:24px}
+.last-cta-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(38px,5.5vw,68px);font-weight:400;line-height:1.08;letter-spacing:-.03em;margin-bottom:22px}
+.last-cta-title em{font-style:italic;font-weight:300;color:var(--accent)}
+.last-cta-sub{font-size:17px;color:var(--text-dim);max-width:580px;margin:0 auto 44px;line-height:1.68}
+.last-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:80px 0 48px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr;gap:64px;align-items:end;padding-bottom:48px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.footer-quote{font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,2.6vw,30px);font-style:italic;font-weight:300;line-height:1.38;color:var(--text);max-width:720px}
+.footer-quote span{color:var(--accent);font-style:normal}
+.footer-brand-blk{text-align:right}
+.fb-name{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text);margin-bottom:6px}
+.fb-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:.05em}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:.06em;flex-wrap:wrap;gap:12px}
+
+#chefup{padding:120px 0;border-bottom:1px solid var(--border)}
+.cu-wrapper{display:grid;grid-template-columns:1fr 360px;gap:1px;background:var(--border-s);border:1px solid var(--border-s);margin-top:56px}
+.cu-main-card{background:var(--bg-card);padding:48px 48px;display:flex;flex-direction:column;gap:28px;position:relative;overflow:hidden}
+.cu-main-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent)}
+.cu-logo-row{display:flex;align-items:center;gap:20px}
+.cu-logo{height:30px;opacity:.85}
+[data-theme="dark"] .cu-logo-light{display:none}[data-theme="dark"] .cu-logo-dark{display:block}
+[data-theme="light"] .cu-logo-light{display:block}[data-theme="light"] .cu-logo-dark{display:none}
+.cu-logo-dark{display:none}
+.cu-tagline{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);border:1px solid var(--border-s);padding:4px 10px}
+.cu-desc{font-size:14px;color:var(--text-dim);line-height:1.72;max-width:580px}
+.cu-benefits{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.cu-benefit{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--text-dim);line-height:1.5}
+.cu-b-icon{color:var(--accent);flex-shrink:0;font-size:15px;margin-top:1px}
+.cu-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);border:1px solid var(--border-s);padding:11px 22px;transition:all .2s;width:fit-content;margin-top:4px}
+.cu-link:hover{border-color:var(--accent-dim);color:var(--accent)}
+.cu-link-sub{display:block;font-size:9px;letter-spacing:.08em;color:var(--text-faint);margin-top:3px;text-transform:lowercase}
+.cu-stats-col{background:var(--bg);display:flex;flex-direction:column;gap:1px}
+.cu-stat{background:var(--bg-card);padding:36px 40px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px;position:relative;overflow:hidden;transition:background .3s;cursor:default}
+.cu-stat::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--accent);transition:height .38s cubic-bezier(.4,0,.2,1)}
+.cu-stat:hover{background:var(--card-hover)}
+.cu-stat:hover::before{height:100%}
+.cu-stat-num{font-family:'Fraunces',Georgia,serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;letter-spacing:-.03em;line-height:1;color:var(--text)}
+.cu-stat-plus{font-size:.55em;color:var(--accent-dim);vertical-align:super}
+.cu-stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);line-height:1.65}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.2,.8,.2,1),transform .65s cubic-bezier(.2,.8,.2,1)}
+.rv.show{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}
+@media(max-width:1060px){.about-grid{grid-template-columns:280px 1fr 220px;gap:36px}}
+@media(max-width:960px){
+  .cu-wrapper{grid-template-columns:1fr}.cu-stats-col{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .nav-desktop{display:none}.hamburger-btn{display:block}.lang-sw{display:none}.lang-select{display:block}
+  .about-grid{grid-template-columns:1fr;gap:36px}.about-photo img{width:auto;max-width:100%;height:auto}
+  .edu-steps{grid-template-columns:1fr 1fr}.proj-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}.svc-grid-2{grid-template-columns:1fr}
+  .contacts-grid{grid-template-columns:1fr;gap:48px}.footer-top{grid-template-columns:1fr;gap:32px}
+  .footer-brand-blk{text-align:left}.why-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}.hp-metrics{grid-template-columns:repeat(2,1fr);padding:28px}
+}
+@media(max-width:680px){
+  .container{padding:0 20px}.header-inner{padding:11px 20px}
+  section{padding:64px 0}.manifesto{padding:80px 0}
+  .hero{padding:64px 0 0;min-height:auto}.hero-grid{display:none}
+  .hero-h1{font-size:clamp(36px,10vw,54px)}.hero-badge{margin-bottom:24px}
+  .mfst-facts{flex-direction:column}.mfst-fact{border-right:none;border-bottom:1px solid var(--border-s)}.mfst-fact:last-child{border-bottom:none}
+  .last-cta{padding:80px 0}.hero-panel{display:none}
+  .edu-steps{grid-template-columns:1fr}.proj-grid{grid-template-columns:1fr}.svc-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}.cu-stats-col{grid-template-columns:1fr}.cu-main-card{padding:32px 28px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="brand-name" data-i18n="brand">Мухаммад Магомедов</div>
+      <div class="brand-sub" data-i18n="brand.sub">Шеф-повар · Бренд-шеф</div>
+    </div>
+    <nav class="nav-desktop">
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#about" data-i18n="nav.about">О себе</a>
+      <a href="#chefup" data-i18n="nav.chefup">ChefUP</a>
+      <a href="#projects" data-i18n="nav.projects">Проекты</a>
+      <a href="#education" data-i18n="nav.edu">Образование</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Портфолио</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-sw">
+        <button class="lang-btn active" data-set-lang="ru">RU</button>
+        <button class="lang-btn" data-set-lang="en">EN</button>
+        <button class="lang-btn" data-set-lang="kz">ҚАЗ</button>
+        <button class="lang-btn" data-set-lang="zh">中文</button>
+      </div>
+      <select class="lang-select" id="langSelect" aria-label="Язык">
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+        <option value="kz">ҚАЗ</option>
+        <option value="zh">中文</option>
+      </select>
+      <button class="theme-btn" id="themeBtn">◐</button>
+      <button class="hamburger-btn" id="burgerBtn">☰</button>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="mobileNav">
+    <a href="#services">Услуги</a><a href="#about">О себе</a><a href="#chefup">ChefUP</a><a href="#projects">Проекты</a>
+    <a href="#education">Образование</a><a href="#portfolio">Портфолио</a><a href="#contacts">Контакты</a>
+  </nav>
+</header>
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker" id="tickerTrack"></div></div>
+<section class="hero" id="home">
+  <div class="hero-grid"></div><div class="hero-fade"></div><div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-location-tag">📍 Сейчас в Алматы · Работаю онлайн и офлайн</div>
+    <div class="hero-badge">
+      <span style="font-size:16px">⭐</span>
+      <div class="hb-text" data-i18n-html="hero.badge">9+ лет в профессии · Опыт кухни <strong>Michelin ★</strong></div>
+    </div>
+    <h1 class="hero-h1">
+      <span class="hl" data-i18n="hero.l1">Мухаммад Магомедов</span>
+      <span class="hl" data-i18n="hero.l2">Шеф-повар &amp;</span>
+      <span class="hl"><em data-i18n="hero.l3">Бренд-шеф</em></span>
+    </h1>
+    <p class="hero-lead" data-i18n-html="hero.lead">9 лет в профессии — от простого повара до Michelin. Моя главная задача — <strong>помочь вашему заведению зарабатывать больше</strong>. Вложения в мою работу окупаются уже в первые месяцы. Это не обещание — это результат.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-prim" data-i18n="hero.cta1">Мои проекты</a>
+      <a href="#contacts" class="btn-sec" data-i18n="hero.cta2">Обсудить проект</a>
+    </div>
+    <div class="hero-stats-strip">
+      <div class="hss-item"><div class="hss-val">9+</div><div class="hss-label" data-i18n="hero.s1">Лет опыта</div></div>
+      <div class="hss-item"><div class="hss-val">120+</div><div class="hss-label" data-i18n="hero.s2">Шефов · ChefUP</div></div>
+      <div class="hss-item"><div class="hss-val">18+</div><div class="hss-label" data-i18n="hero.s3">Проектов</div></div>
+      <div class="hss-item"><div class="hss-val">3</div><div class="hss-label" data-i18n="hero.s4">Страны</div></div>
+    </div>
+    <div class="hero-panel" aria-hidden="true">
+      <div class="hp-bar">
+        <div class="hp-dots"><span class="hp-dot"></span><span class="hp-dot"></span><span class="hp-dot"></span></div>
+        <div class="hp-title-bar">MAGOMEDOV MUHAMMAD · CHEF &amp; BRAND CHEF PROFILE</div>
+        <div class="hp-online"><span class="hp-alive"></span>ОТКРЫТ ДЛЯ ПРОЕКТОВ</div>
+      </div>
+      <div class="hp-metrics">
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c0-3.31 2.69-6 6-6s6 2.69 6 6c0 2.4-1.4 4.47-3.44 5.49L12 16H8l-.56-1.51C5.4 13.47 4 11.4 4 9z"/><line x1="8" y1="16" x2="12" y2="16"/><line x1="8" y1="18" x2="12" y2="18"/></svg><div class="hpm-lbl">MENU DEVELOPMENT <span>98%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:98%"></div></div></div>
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="5" height="4" rx="0.5"/><rect x="13" y="3" width="5" height="4" rx="0.5"/><rect x="7.5" y="13" width="5" height="4" rx="0.5"/><path d="M4.5 7v3.5h5.5"/><path d="M15.5 7v3.5h-5.5"/></svg><div class="hpm-lbl">PRODUCTION MGMT <span>95%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:95%"></div></div></div>
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="7" r="3"/><path d="M4 17c0-3.31 2.69-6 6-6s6 2.69 6 6"/></svg><div class="hpm-lbl">TEAM TRAINING <span>90%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:90%"></div></div></div>
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,15 7,9 11,12 18,4"/><polyline points="13,4 18,4 18,9"/></svg><div class="hpm-lbl">HEALTHY CUISINE <span>93%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:93%"></div></div></div>
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l3 3"/></svg><div class="hpm-lbl">QUALITY CONTROL <span>96%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:96%"></div></div></div>
+        <div class="hpm"><svg class="hpm-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h4M10 3v4M17 10h-4M10 17v-4"/><circle cx="10" cy="10" r="3"/></svg><div class="hpm-lbl">COST OPTIMIZATION <span>88%</span></div><div class="hpm-track"><div class="hpm-fill" style="width:88%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="manifesto">
+  <div class="mfst-bg">КУХНЯ</div>
+  <div class="container">
+    <div class="sec-label rv">Позиционирование</div>
+    <div class="mfst-title rv rv-d1">Я не ищу работу —<br>я беру ваш ресторан<br><em>как проект</em></div>
+    <p class="mfst-text rv rv-d2">Бренд-шеф — это не наёмный сотрудник на кухне. Это человек, который приходит с <strong>концепцией, системой и ответственностью за результат</strong>. За 9 лет я прошёл путь от повара до CEO производства, проработал на кухне Michelin-звёздного ресторана и запустил более 18 проектов в трёх странах. Теперь я берусь за ваше заведение — и отношусь к нему как к <strong>собственному делу</strong>.</p>
+    <div class="mfst-facts rv rv-d3">
+      <div class="mfst-fact"><div class="mf-title">Рестораны</div><div class="mf-desc">Горыныч ★, Папаха, Jacques, Velvet, The Theater, Gambit</div></div>
+      <div class="mfst-fact"><div class="mf-title">Кафе &amp; Кофейни</div><div class="mf-desc">V-60, Pekarius, Mod, Koke, Yourta, Little Brazil, Billionaire, molli.kitchen, Olly</div></div>
+      <div class="mfst-fact"><div class="mf-title">Производство &amp; Консалтинг</div><div class="mf-desc">TastyAlmaty (CEO), Eat&amp;Fit, ХБК Аксай</div></div>
+    </div>
+  </div>
+</div>
+<section id="services">
+  <div class="container">
+    <div class="sec-label rv">01 · Услуги</div>
+    <h2 class="rv rv-d1">Решения, которые<br><em>увеличивают ваш доход</em></h2>
+    <p class="sec-lead rv rv-d2">Я не просто разрабатываю меню — я выстраиваю систему, которая зарабатывает. Каждая услуга — конкретный результат с измеримыми показателями. Вложения окупаются в первые месяцы.</p>
+    <div class="svc-value-strip rv rv-d3">
+      <div class="svs-item"><div class="svs-num">+20–35%</div><div class="svs-lbl">к выручке после обновления меню</div></div>
+      <div class="svs-item"><div class="svs-num">1–2 мес</div><div class="svs-lbl">средний срок окупаемости</div></div>
+      <div class="svs-item"><div class="svs-num">18+</div><div class="svs-lbl">успешных проектов в трёх странах</div></div>
+      <div class="svs-item"><div class="svs-num">9 лет</div><div class="svs-lbl">опыта, включая Michelin-кухню</div></div>
+    </div>
+    <div class="svc-section">
+      <div class="svc-cat rv rv-d1">
+        <div class="svc-cat-label">Меню &amp; Концепция</div>
+        <div class="svc-grid">
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◈</div><div class="svc-title">Меню, которое увеличивает выручку</div><div class="svc-desc">Полный аудит + переработка под маржинальность. Убираю убыточные позиции, ввожу «хиты» с высоким food cost ratio. <strong>Результат у клиентов: +20–35% к выручке</strong> без изменения трафика. Вы получаете: анализ, новые блюда с техкартами, план внедрения.</div><div class="svc-price">от $600<span class="svc-price-note">полное меню + техкарты · 7–14 дней · окупается за 4–6 недель</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">⬡</div><div class="svc-title">Сезонное обновление — рост среднего чека</div><div class="svc-desc">Обновляю 30–50% позиций под сезон и тренды. Сезонные продукты = снижение food cost + рост среднего чека. <strong>Гости приходят снова</strong>, потому что меню живёт. Результат через 5–7 дней после внедрения.</div><div class="svc-price">от $400<span class="svc-price-note">обновление + тест-кухня · быстрый старт · виден эффект за 2–3 недели</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◎</div><div class="svc-title">Концепция заведения с нуля</div><div class="svc-desc">Гастрономическая концепция нового места: кухня, стиль подачи, стартовое меню, ценовое позиционирование. <strong>Вы запускаетесь с готовым продуктом</strong>, а не методом проб и ошибок. Кейсы: Yourta, Koke, Mod — три разные концепции, каждая работает.</div><div class="svc-price">от $800<span class="svc-price-note">концепция + стартовое меню · от 2 недель</span></div></div></div>
+        </div>
+      </div>
+      <div class="svc-cat rv rv-d2" style="margin-top:32px">
+        <div class="svc-cat-label">Запуск &amp; Масштабирование</div>
+        <div class="svc-grid">
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◇</div><div class="svc-title">Бренд-шеф под ключ</div><div class="svc-desc">Полное сопровождение запуска: концепция, меню, подбор и обучение команды, техкарты, стандарты. <strong>Вы открываетесь, не разбираясь в кухне.</strong> Присутствую на старте, ставлю процессы, передаю команде. Ответственность за результат — на мне.</div><div class="svc-price">от $1 500<span class="svc-price-note">полный запуск · первый месяц · самый быстрый путь к работающей кухне</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">⊕</div><div class="svc-title">Новое направление — дополнительная выручка</div><div class="svc-desc">Запуск нового продукта внутри бизнеса: ЗОЖ-меню, доставка, кейтеринг, завтраки. <strong>Новый поток дохода без аренды второго места</strong>. Полный цикл от идеи до первых продаж за 2–4 недели. Кейсы: V-60, ХБК Аксай.</div><div class="svc-price">от $800<span class="svc-price-note">консалтинг + запуск · 2–4 недели</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">⊗</div><div class="svc-title">Линейка готовой еды для производства</div><div class="svc-desc">Разработка ассортимента для фуд-производства: рецептуры, техкарты, КБЖУ, HACCP, требования к упаковке. <strong>Вы получаете производственный пакет «под ключ»</strong>, готовый к немедленному запуску. Кейсы: TastyAlmaty, Eat&amp;Fit.</div><div class="svc-price">от $700<span class="svc-price-note">линейка 10–20 позиций · техкарты + КБЖУ + HACCP</span></div></div></div>
+        </div>
+      </div>
+      <div class="svc-cat rv rv-d3" style="margin-top:32px">
+        <div class="svc-cat-label">Персонал &amp; Процессы</div>
+        <div class="svc-grid">
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◈</div><div class="svc-title">Обучение кухонной команды</div><div class="svc-desc">Интенсив 1–5 дней: стандарты приготовления, скорость отдачи, качество, санитарные нормы. <strong>Меньше брака, меньше отходов, стабильное качество</strong> — сразу после тренинга. Команды от 2 до 20 человек, любой формат заведения.</div><div class="svc-price">от $400<span class="svc-price-note">зависит от длительности и размера команды</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◉</div><div class="svc-title">Аудит кухни: найдём, где теряете деньги</div><div class="svc-desc">Приезжаю, наблюдаю, считаю. Проверяю процессы, хранение, food cost, скорость и качество. <strong>Каждая «дыра» стоит вам денег прямо сейчас</strong> — и я их нахожу. Письменный отчёт с конкретным планом с приоритетами.</div><div class="svc-price">$300–500<span class="svc-price-note">выезд + отчёт + план · обычно окупается за первый месяц</span></div></div></div>
+          <div class="svc-card"><div class="svc-inner"><div class="svc-icon">◆</div><div class="svc-title">Подбор шефа или персонала</div><div class="svc-desc">Через базу ChefUP: 120+ шеф-поваров и тысячи единиц линейного персонала. <strong>Закрываем вакансию за 7–14 дней</strong>, а не за месяцы через обычный рынок. Проверенные кандидаты — без лотереи. Сопровождение в первые недели.</div><div class="svc-price">от $500<span class="svc-price-note">поиск + сопровождение · эксклюзивный доступ к базе ChefUP</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="sec-label rv">02 · О себе</div>
+    <h2 class="rv rv-d1">Мухаммад Магомедов —<br><em>шеф с характером</em></h2>
+    <div class="about-grid">
+      <div class="about-photo rv rv-d1">
+        <img src="photo.jpg" alt="Мухаммад Магомедов — Шеф-повар и Бренд-шеф">
+        <div class="about-photo-caption">Мухаммад Магомедов · Шеф-повар &amp; Бренд-шеф · Алматы</div>
+      </div>
+      <div class="about-text rv rv-d2">
+        <p>Профессиональный путь начал в 2016 году и за 9 лет прошёл все ступени кухни — от повара-заготовщика до шеф-повара и CEO. Работал в ресторанах Дагестана, Москвы и Казахстана. В 2021 году работал на кухне ресторана <strong>Горыныч</strong> в Москве — обладателя звезды Michelin. Опыт, который переформатировал понимание профессии навсегда.</p>
+        <p>Основал производство правильного питания <strong>TastyAlmaty</strong>, вырастил его до полноценного бренда. Параллельно — основатель <strong>ChefUP</strong>, первой профессиональной экосистемы для HoReCa в Казахстане. Сегодня работает как бренд-шеф с кафе, ресторанами и производствами — выстраивает концепции, разрабатывает меню, обучает команды.</p>
+        <p>Специализация: авторская кухня, правильное питание, запуск и перезапуск заведений, обучение персонала и построение кухонных процессов под <strong>конкретную экономику и концепцию</strong>.</p>
+      </div>
+      <div class="about-facts rv rv-d3">
+        <div class="ab-fact"><div class="abf-label">Опыт</div><div class="abf-val">9+</div><div class="abf-desc">лет в профессии</div></div>
+        <div class="ab-fact"><div class="abf-label">Сейчас</div><div class="abf-val-sm">Алматы, КЗ</div><div class="abf-desc">На месте и онлайн</div></div>
+        <div class="ab-fact"><div class="abf-label">Проектов</div><div class="abf-val">18+</div><div class="abf-desc">рестораны, кафе, производство</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="chefup">
+  <div class="container">
+    <div class="sec-label rv">03 · ChefUP · Экосистема</div>
+    <h2 class="rv rv-d1">Основатель первой<br><em>экосистемы для HoReCa</em></h2>
+    <p class="sec-lead rv rv-d2">Мухаммад — основатель ChefUP, первой профессиональной платформы для всей индустрии гостеприимства Казахстана. Приглашая его в проект, вы получаете не просто шеф-повара — вы открываете двери к целой экосистеме связей и ресурсов рынка.</p>
+    <div class="cu-wrapper">
+      <div class="cu-main-card rv rv-d2">
+        <div class="cu-logo-row">
+          <img src="chefup.svg" alt="ChefUP" class="cu-logo cu-logo-light"><img src="chefup-dark.svg" alt="ChefUP" class="cu-logo cu-logo-dark">
+          <div class="cu-tagline">Первая HoReCa-экосистема</div>
+        </div>
+        <p class="cu-desc">ChefUP объединяет профессионалов индустрии — шеф-поваров, линейный персонал, рестораторов и поставщиков — в единой платформе. Как основатель, Мухаммад имеет прямой выход на всю сеть рынка: от лучших кандидатов до надёжных поставщиков с проверенными условиями.</p>
+        <div class="cu-benefits">
+          <div class="cu-benefit"><span class="cu-b-icon">◈</span><span><strong>Персонал под любой формат:</strong> быстрый доступ к базе проверенных шефов и линейного персонала — нет нужды месяцами искать команду.</span></div>
+          <div class="cu-benefit"><span class="cu-b-icon">⬡</span><span><strong>Поставщики и цены:</strong> прямые контакты с поставщиками, которых нет в открытом доступе. Лучшие условия — без посредников.</span></div>
+          <div class="cu-benefit"><span class="cu-b-icon">◎</span><span><strong>Инсайты рынка:</strong> понимание трендов, движения цен и запросов аудитории — из первых уст индустриального сообщества.</span></div>
+        </div>
+        <a href="https://chefupai.vercel.app/" target="_blank" rel="noopener" class="cu-link">Записаться на ранний доступ<span class="cu-link-sub">Бета-тестирование · Запуск 1 июня</span></a>
+      </div>
+      <div class="cu-stats-col">
+        <div class="cu-stat rv rv-d1">
+          <div class="cu-stat-num">120<span class="cu-stat-plus">+</span></div>
+          <div class="cu-stat-label">Шеф-поваров<br>в базе платформы</div>
+        </div>
+        <div class="cu-stat rv rv-d2">
+          <div class="cu-stat-num">50 000<span class="cu-stat-plus">+</span></div>
+          <div class="cu-stat-label">Сотрудников HoReCa<br>в единой базе</div>
+        </div>
+        <div class="cu-stat rv rv-d3">
+          <div class="cu-stat-num">№1</div>
+          <div class="cu-stat-label">Экосистема для HoReCa<br>в Казахстане</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="container">
+    <div class="sec-label rv">04 · Мои проекты</div>
+    <h2 class="rv rv-d1">Профессиональный путь —<br><em>18 проектов в трёх странах</em></h2>
+    <p class="sec-lead rv rv-d2">Каждый проект — конкретный результат, а не строчка в резюме. Рестораны, кафе, кофейни и производства в России, Казахстане и Дагестане.</p>
+    <div class="proj-section-wrap">
+      <div class="proj-cat rv rv-d1">
+        <div class="proj-cat-header"><span class="proj-cat-name">Рестораны</span><span class="proj-cat-count">6 проектов</span></div>
+        <div class="proj-grid">
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2021 · Москва <span class="badge-michelin">★ MICHELIN</span></div><div class="proj-title">Горыныч</div><div class="proj-location">г. Москва, Россия</div><div class="proj-desc">Работа на кухне одного из первых российских ресторанов со звездой Michelin. Полное погружение в мишленовскую культуру: стандарты качества, точность техник, темп, дисциплина. Опыт, который переформатировал понимание профессии навсегда.</div><div class="proj-tags"><span class="proj-tag">★ Michelin</span><span class="proj-tag">Авторская кухня</span><span class="proj-tag">Fine Dining</span><span class="proj-tag">Мировые стандарты</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2022 · Махачкала</div><div class="proj-title">Папаха</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Один из знаковых ресторанов Дагестана с кавказской кухней. Роль су-шефа: управление командой горячего цеха, стандартизация рецептур, контроль себестоимости и качества подачи. Первый серьёзный управленческий опыт.</div><div class="proj-tags"><span class="proj-tag">Кавказская кухня</span><span class="proj-tag">Су-шеф</span><span class="proj-tag">Управление командой</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2020 · Махачкала</div><div class="proj-title">Velvet</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Современный ресторан. Первая позиция су-шефа: участие в разработке меню, выстраивание стандартов кухни, обучение линейного персонала и контроль отдачи блюд в потоке.</div><div class="proj-tags"><span class="proj-tag">Современная кухня</span><span class="proj-tag">Су-шеф</span><span class="proj-tag">Разработка меню</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2018 · Махачкала</div><div class="proj-title">Jacques</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Ресторан европейской кухни. Старший повар: координация горячего цеха, контроль качества, участие в разработке сезонных позиций. Переход от исполнителя к лидеру — важная точка роста.</div><div class="proj-tags"><span class="proj-tag">Европейская кухня</span><span class="proj-tag">Старший повар</span><span class="proj-tag">Контроль качества</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2023 · Алматы</div><div class="proj-title">The Theater</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Знаковый ресторан Алматы. Адаптация к казахстанскому рынку: изучение локальных вкусовых предпочтений, ингредиентов, гастрономической культуры. Фундамент для дальнейших проектов в Казахстане.</div><div class="proj-tags"><span class="proj-tag">Алматы</span><span class="proj-tag">Авторская кухня</span><span class="proj-tag">Казахстанский рынок</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2016 · Старт карьеры</div><div class="proj-title">Gambit</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Первый профессиональный проект — точка отсчёта. Базовые техники, дисциплина кухни, производственный цикл. Фундамент, без которого не было бы ни Michelin, ни собственного производства.</div><div class="proj-tags"><span class="proj-tag">Старт карьеры</span><span class="proj-tag">Базовые техники</span><span class="proj-tag">2016</span></div></div></div>
+        </div>
+      </div>
+      <div class="proj-cat rv rv-d2" style="margin-top:44px">
+        <div class="proj-cat-header"><span class="proj-cat-name">Кафе &amp; Кофейни</span><span class="proj-cat-count">9 проектов</span></div>
+        <div class="proj-grid">
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2019 · Махачкала</div><div class="proj-title">V-60</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Запуск концепции правильного питания в сети кафе. Разработка ЗОЖ-меню с нуля: подбор ингредиентов, расчёт КБЖУ, техкарты. Первый опыт в роли шефа целого направления — здесь родилась специализация на здоровой еде.</div><div class="proj-tags"><span class="proj-tag">Правильное питание</span><span class="proj-tag">Шеф ЗОЖ-направления</span><span class="proj-tag">Запуск концепции</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2017 · Махачкала</div><div class="proj-title">Pekarius</div><div class="proj-location">г. Махачкала, Дагестан</div><div class="proj-desc">Сеть кафе с высоким трафиком. Горячий цех в условиях пиковых нагрузок: скорость, стабильность, единые стандарты по всем точкам. Ценный опыт работы в формате масштабируемого сетевого бизнеса.</div><div class="proj-tags"><span class="proj-tag">Сеть кафе</span><span class="proj-tag">High Volume</span><span class="proj-tag">Стандарты сети</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Астана</div><div class="proj-title">Mod Coffee</div><div class="proj-location">г. Астана, Казахстан</div><div class="proj-desc">Бренд-шеф проект: кухонное меню под кофейный формат — завтраки, бранч, десерты. Ключевой вызов: высокая скорость отдачи при минимальной команде и максимальном качестве каждой позиции.</div><div class="proj-tags"><span class="proj-tag">Бренд-шеф</span><span class="proj-tag">Кофейный формат</span><span class="proj-tag">Завтраки &amp; Бранч</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Астана</div><div class="proj-title">Koke</div><div class="proj-location">г. Астана, Казахстан</div><div class="proj-desc">Авторское меню под казахстанскую аудиторию: локальные вкусы, сезонность, оптимизация себестоимости. Меню, которое нравится гостям и приносит реальную прибыль заведению.</div><div class="proj-tags"><span class="proj-tag">Бренд-шеф</span><span class="proj-tag">Авторское меню</span><span class="proj-tag">Оптимизация food cost</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Астана</div><div class="proj-title">Yourta</div><div class="proj-location">г. Астана, Казахстан</div><div class="proj-desc">Концептуальная кофейня с казахской идентичностью. Меню на стыке традиционной казахской кухни и современных трендов — уникальный гастрономический образ, который отличает заведение от десятков конкурентов.</div><div class="proj-tags"><span class="proj-tag">Казахская кухня</span><span class="proj-tag">Концепт</span><span class="proj-tag">Гастро-идентичность</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">Little Brazil</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Ресторан бразильской кухни в формате Churrasco Grill (MFK VILLA, ул. Аль-Фараби 140а/4). Работа над меню и подачей горячего цеха: блюда на гриле, гарниры, соусы, стандарты подачи в потоке при среднем чеке 25&nbsp;000 ₸.</div><div class="proj-tags"><span class="proj-tag">Горячий цех</span><span class="proj-tag">Churrasco Grill</span><span class="proj-tag">Меню</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">Billionaire</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Luxury karaoke-клуб с 3 VIP-залами и большим залом (Samal, ул. Самал 3/25, Merkur Towers). Разработка меню и постановка горячего цеха под высокий трафик вечернего формата.</div><div class="proj-tags"><span class="proj-tag">Горячий цех</span><span class="proj-tag">Luxury</span><span class="proj-tag">Вечерний формат</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">molli.kitchen</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Кухня-доставка готовых блюд (ул. Аль-Фараби 77/7). Позиция су-шефа: разработка рецептур, контроль качества, постановка производственных процессов и стандартов для доставочного формата.</div><div class="proj-tags"><span class="proj-tag">Су-шеф</span><span class="proj-tag">Доставка</span><span class="proj-tag">Разработка рецептур</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">Olly</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Ресторан европейской кухни с рейтингом 4.9 ★ (2 276 отзывов, ул. Кекілбайұлы 219/1). Работа над меню и подачей горячего цеха — высокие стандарты подачи при стабильном среднем чеке 6&nbsp;000 ₸.</div><div class="proj-tags"><span class="proj-tag">Горячий цех</span><span class="proj-tag">Европейская кухня</span><span class="proj-tag">4.9 ★</span></div></div></div>
+        </div>
+      </div>
+      <div class="proj-cat rv rv-d3" style="margin-top:44px">
+        <div class="proj-cat-header"><span class="proj-cat-name">Производство &amp; Консалтинг</span><span class="proj-cat-count">3 проекта</span></div>
+        <div class="proj-grid">
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы <span class="badge-ceo">CEO</span></div><div class="proj-title">TastyAlmaty</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Основал и вырастил с нуля производство правильного питания. Прошёл путь от руководителя производства до генерального директора. Выстроил весь цикл: рецептуры, HACCP, логистика, команда, продажи. Инновационный бренд в рамках стартап-хаба BenevskyHub.</div><div class="proj-tags"><span class="proj-tag">Основатель &amp; CEO</span><span class="proj-tag">Производство</span><span class="proj-tag">Правильное питание</span><span class="proj-tag">BenevskyHub</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">Eat&amp;Fit</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Разработка продуктовой линейки для производства здорового питания: готовые блюда, рационные боксы, снеки. Стандартизация рецептур, расчёт КБЖУ, технологические карты с учётом требований СанПиН.</div><div class="proj-tags"><span class="proj-tag">Производство еды</span><span class="proj-tag">ЗОЖ-линейка</span><span class="proj-tag">Техкарты &amp; КБЖУ</span></div></div></div>
+          <div class="proj-card"><div class="proj-inner"><div class="proj-num">2024–2025 · Алматы</div><div class="proj-title">ХБК Аксай</div><div class="proj-location">г. Алматы, Казахстан</div><div class="proj-desc">Консалтинг по запуску новых направлений: стратегия расширения ассортимента, запуск новых продуктовых линеек, обучение производственного персонала. Полное сопровождение от идеи до первых продаж.</div><div class="proj-tags"><span class="proj-tag">Консалтинг</span><span class="proj-tag">Запуск направлений</span><span class="proj-tag">Стратегия</span><span class="proj-tag">Обучение</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="sec-label rv">05 · Образование</div>
+    <h2 class="rv rv-d1">Учился у лучших —<br><em>в трёх городах</em></h2>
+    <p class="sec-lead rv rv-d2">От базового кулинарного образования до международной школы ресторанного бизнеса Аркадия Новикова. Теория подкреплена 9 годами практики.</p>
+    <div class="edu-steps rv rv-d3">
+      <div class="edu-card"><div class="edu-inner"><div class="edu-num">→ 01 · 2020</div><div class="edu-years">SVCH</div><div class="edu-uni">SVCH School</div><div class="edu-loc">Санкт-Петербург, Россия</div><div class="edu-spec">Международная школа поварского искусства и ресторанного менеджмента. Профессиональные техники мирового уровня, стандарты качества, управление кухней и ресторанный менеджмент.</div></div></div>
+      <div class="edu-card"><div class="edu-inner"><div class="edu-num">→ 02 · 2019</div><div class="edu-years">Novikov</div><div class="edu-uni">Novikov Space</div><div class="edu-loc">Москва, Россия</div><div class="edu-spec">Школа ресторанного бизнеса Аркадия Новикова — одного из самых влиятельных рестораторов России. Управление заведением, концептуальное мышление, экономика ресторана, работа с командой.</div></div></div>
+      <div class="edu-card"><div class="edu-inner"><div class="edu-num">→ 03 · 2015</div><div class="edu-years">ДГНУХ</div><div class="edu-uni">ДГНУХ</div><div class="edu-loc">Махачкала, Дагестан</div><div class="edu-spec">Дагестанский государственный народнохозяйственный университет. Направление: бизнес-информатика. Аналитическое мышление, экономика, управление — база для предпринимательской деятельности.</div></div></div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="container">
+    <div class="sec-label rv">06 · Компетенции</div>
+    <h2 class="rv rv-d1">Что я умею —<br><em>и умею хорошо</em></h2>
+    <p class="sec-lead rv rv-d2">За 9 лет — кулинарные, управленческие, аналитические и предпринимательские компетенции.</p>
+    <div class="why-grid rv rv-d2">
+      <div class="why-card"><div class="why-inner"><div class="why-icon">◈</div><div class="why-title">Кулинарное мастерство</div><div class="why-desc">Авторская, европейская и кавказская кухня. Современные техники: су-вид, ферментация, работа с текстурами. Опыт Michelin-кухни. Специализация на правильном питании: ЗОЖ-меню с расчётом КБЖУ и вкусом, который возвращает гостей снова и снова.</div></div></div>
+      <div class="why-card"><div class="why-inner"><div class="why-icon">⬡</div><div class="why-title">Управление производством</div><div class="why-desc">Полный производственный цикл: от закупки сырья до готового продукта. Соблюдение СанПиН и HACCP. Контроль food cost и себестоимости на каждом этапе. Опыт управления командами от 3 до 20+ человек в ресторанах и производствах.</div></div></div>
+      <div class="why-card"><div class="why-inner"><div class="why-icon">◎</div><div class="why-title">Разработка меню и технологических карт</div><div class="why-desc">Меню с нуля под концепцию, аудиторию и экономику заведения. Разработка полных технологических карт с расчётом выходов, потерь и себестоимости. Оптимизация ассортимента под рост маржинальности без потери качества.</div></div></div>
+      <div class="why-card"><div class="why-inner"><div class="why-icon">◇</div><div class="why-title">Лидерство и обучение команды</div><div class="why-desc">Подбор, обучение и мотивация поваров разного уровня. Выстраивание кухонной иерархии, стандартов работы, культуры качества. Умею передать не только навыки, но и отношение к профессии — чтобы команда работала так же без меня.</div></div></div>
+    </div>
+  </div>
+</section>
+<section id="portfolio">
+  <div class="container">
+    <div class="sec-label rv">07 · Портфолио</div>
+    <h2 class="rv rv-d1">Мои работы —<br><em>говорят сами за себя</em></h2>
+    <p class="sec-lead rv rv-d2">Авторские блюда, проекты и производство. Фотографии из ресторанов, кафе и собственного бренда TastyAlmaty.</p>
+    <div class="portfolio-grid rv rv-d2" id="portfolioGrid">
+      <div class="portfolio-item"><img src="portfolio/[Final] Паста Альфредо с креветками.jpg" alt="Паста Альфредо с креветками" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Том Ям с креветками.jpg" alt="Том Ям с креветками" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Борщ с говядиной, сметана и зеленью.jpg" alt="Борщ с говядиной" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Плов с мраморной говядиной.jpg" alt="Плов с мраморной говядиной" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Вок_с_королевскими_креветками,_кисло_сладким_соусом_и_лепешкой.jpg" alt="Вок с королевскими креветками" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Крем-суп из тыквы и морковки, с семечками и сухариками.jpg" alt="Крем-суп из тыквы" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Чизкейк испанский с карамелью и гранолой без сахара и глютена.jpg" alt="Испанский чизкейк" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Куриный_стейк_с_рисом_по_мексикански_и_соусом_чипотле.jpg" alt="Куриный стейк по-мексикански" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Азу с говядиной.jpg" alt="Азу с говядиной" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Сырники Карамель-Яблоко без сахара и глютена.jpg" alt="Сырники Карамель-Яблоко" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Паста Руккола Креветки.jpg" alt="Паста Руккола Креветки" loading="lazy"></div>
+      <div class="portfolio-item"><img src="portfolio/[Final] Шоколадный чизкейк с карамелью без сахара и глютена.jpg" alt="Шоколадный чизкейк" loading="lazy"></div>
+    </div>
+    <div class="rv rv-d3" style="text-align:center;margin-top:40px">
+      <a href="portfolio/" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px">Смотреть всё портфолио <span style="opacity:.6">→</span></a>
+    </div>
+  </div>
+</section>
+<div class="last-cta">
+  <div class="last-cta-bg"></div><div class="last-cta-glow"></div>
+  <div class="container">
+    <div class="last-cta-label">Следующий шаг</div>
+    <div class="last-cta-title">Готов взяться<br>за ваш <em>проект</em></div>
+    <p class="last-cta-sub">Расскажите о вашем заведении или идее — обсудим, как вывести его на новый уровень. Отвечу в течение нескольких часов.</p>
+    <div class="last-cta-actions">
+      <a href="#contacts" class="btn-prim">Обсудить проект</a>
+      <a href="https://t.me/Chef_TastyAlmaty" target="_blank" class="btn-sec">Написать в Telegram</a>
+    </div>
+  </div>
+</div>
+<section id="contacts">
+  <div class="container">
+    <div class="sec-label rv">08 · Контакты</div>
+    <h2 class="rv rv-d1">Начнём с<br><em>бесплатной консультации</em></h2>
+    <p class="sec-lead rv rv-d2">Перед тем как обсуждать условия — давайте разберём вашу ситуацию. Первый час бесплатно.</p>
+    <div class="lead-magnet rv rv-d2">
+      <div class="lm-top">
+        <div class="lm-badge">БЕСПЛАТНО</div>
+        <div class="lm-title">1 час: Разбор точек роста вашего заведения</div>
+        <div class="lm-format">Онлайн или офлайн · Дорога и питание — за ваш счёт</div>
+      </div>
+      <div class="lm-grid">
+        <div class="lm-item"><span class="lm-check">✓</span><div><strong>Аудит меню и ценообразования</strong><br>Разбираем какие позиции убыточны, где теряете деньги на food cost, что нужно убрать или добавить прямо сейчас.</div></div>
+        <div class="lm-item"><span class="lm-check">✓</span><div><strong>Анализ вашей кухни и команды</strong><br>Оцениваем организацию процессов, скорость отдачи, типичные узкие места — и как их устранить быстро.</div></div>
+        <div class="lm-item"><span class="lm-check">✓</span><div><strong>3 конкретных действия на ближайший месяц</strong><br>По итогам сессии вы получаете три точечных рекомендации, которые можно внедрить немедленно без больших затрат.</div></div>
+        <div class="lm-item"><span class="lm-check">✓</span><div><strong>Оценка потенциала роста выручки</strong><br>Честно скажу, сколько можно добавить к выручке при текущих ресурсах — и как этого достичь.</div></div>
+      </div>
+      <div class="lm-cta-row">
+        <a href="https://wa.me/77070156999?text=Здравствуйте!%20Хочу%20записаться%20на%20бесплатную%20консультацию" target="_blank" rel="noopener" class="btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Написать в WhatsApp
+        </a>
+        <a href="https://t.me/Chef_TastyAlmaty" target="_blank" rel="noopener" class="btn-tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
+    <div class="ci-row rv rv-d3">
+      <div class="ci-cell"><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:tasty.almaty@proton.me">tasty.almaty@proton.me</a></div></div>
+      <div class="ci-cell"><div class="ci-label">Телефон</div><div class="ci-val"><a href="tel:+77070156999">+7 707 015 69 99</a></div></div>
+      <div class="ci-cell"><div class="ci-label">Telegram</div><div class="ci-val"><a href="https://t.me/Chef_TastyAlmaty" target="_blank">@Chef_TastyAlmaty</a></div></div>
+      <div class="ci-cell"><div class="ci-label">Локация</div><div class="ci-val">Алматы, Казахстан</div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-quote">"Еда — это не <span>продукт</span>, это опыт, который гость уносит с собой."</div>
+      <div class="footer-brand-blk"><div class="fb-name">Мухаммад Магомедов</div><div class="fb-sub">Шеф-повар · Бренд-шеф · Алматы</div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Muhammad Magomedov</span>
+      <span>tasty.almaty@proton.me</span>
+      <span>+7 707 015 69 99</span>
+    </div>
+  </div>
+</footer>
+<script>
+const LANG={ru:{'brand':'Мухаммад Магомедов','brand.sub':'Шеф-повар · Бренд-шеф','nav.about':'О себе','nav.projects':'Проекты','nav.services':'Услуги','nav.edu':'Образование','nav.portfolio':'Портфолио','nav.chefup':'ChefUP','nav.contacts':'Контакты','hero.badge':'9+ лет в профессии · Опыт кухни <strong>Michelin ★</strong>','hero.l1':'Мухаммад Магомедов','hero.l2':'Шеф-повар &','hero.l3':'Бренд-шеф','hero.lead':'9 лет в профессии — от простого повара до Michelin. Моя главная задача — <strong>помочь вашему заведению зарабатывать больше</strong>. Вложения в мою работу окупаются уже в первые месяцы. Это не обещание — это результат.','hero.cta1':'Мои проекты','hero.cta2':'Обсудить проект','hero.s1':'Лет опыта','hero.s2':'Шефов · ChefUP','hero.s3':'Проектов','hero.s4':'Страны'},en:{'brand':'Muhammad Magomedov','brand.sub':'Head Chef · Brand Chef','nav.about':'About','nav.projects':'Projects','nav.services':'Services','nav.edu':'Education','nav.portfolio':'Portfolio','nav.chefup':'ChefUP','nav.contacts':'Contact','hero.badge':'9+ years experience · <strong>Michelin ★</strong> kitchen','hero.l1':'Muhammad Magomedov','hero.l2':'Head Chef &','hero.l3':'Brand Chef','hero.lead':'9 years in the profession — from a simple cook to Michelin. My main goal is to <strong>help your restaurant earn more</strong>. The investment pays off within the first months. Not a promise — a result.','hero.cta1':'My Projects','hero.cta2':'Discuss a Project','hero.s1':'Years of Experience','hero.s2':'Chefs · ChefUP','hero.s3':'Projects','hero.s4':'Countries'},kz:{'brand':'Мұхаммад Мағомедов','brand.sub':'Аспаз · Бренд-аспаз','nav.about':'Мен туралы','nav.projects':'Жобалар','nav.services':'Қызметтер','nav.edu':'Білім','nav.portfolio':'Портфолио','nav.chefup':'ChefUP','nav.contacts':'Байланыс','hero.badge':'9+ жыл тәжірибе · <strong>Michelin ★</strong> асханасы','hero.l1':'Мұхаммад Мағомедов','hero.l2':'Аспаз &','hero.l3':'Бренд-аспаз','hero.lead':'9 жыл тәжірибе — қарапайым аспаздан Michelin-ге дейін. Менің басты мақсатым — <strong>мекемеңіздің көбірек табыс табуына</strong> көмектесу. Жұмысыма деген инвестиция алғашқы айларда өзін ақтайды. Бұл уәде емес — нәтиже.','hero.cta1':'Жобаларым','hero.cta2':'Жобаны талқылау','hero.s1':'Жыл тәжірибе','hero.s2':'Аспаз · ChefUP','hero.s3':'Жоба','hero.s4':'Ел'},zh:{'brand':'穆罕默德·马戈梅多夫','brand.sub':'主厨 · 品牌主厨','nav.about':'关于我','nav.projects':'项目','nav.services':'服务','nav.edu':'教育','nav.portfolio':'作品集','nav.chefup':'ChefUP','nav.contacts':'联系','hero.badge':'9年以上经验 · <strong>米其林 ★</strong> 厨房','hero.l1':'穆罕默德·马戈梅多夫','hero.l2':'主厨 &','hero.l3':'品牌主厨','hero.lead':'从厨师到米其林，9年职业生涯。我的主要目标是<strong>帮助您的餐厅赚得更多</strong>。对我工作的投资将在头几个月内收回成本。这不是承诺——这是结果。','hero.cta1':'我的项目','hero.cta2':'讨论项目','hero.s1':'年从业经验','hero.s2':'厨师 · ChefUP','hero.s3':'个项目','hero.s4':'个国家'}};
+function applyLang(l){document.documentElement.setAttribute('data-lang',l);var sel=document.getElementById('langSelect');if(sel)sel.value=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(LANG[l][k]!==undefined)e.textContent=LANG[l][k]});document.querySelectorAll('[data-i18n-html]').forEach(e=>{const k=e.getAttribute('data-i18n-html');if(LANG[l][k]!==undefined)e.innerHTML=LANG[l][k]});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-set-lang')===l))}
+document.querySelectorAll('[data-set-lang]').forEach(b=>b.addEventListener('click',()=>applyLang(b.getAttribute('data-set-lang'))));
+document.getElementById('langSelect').addEventListener('change',function(){applyLang(this.value)});
+document.getElementById('themeBtn').addEventListener('click',()=>{const t=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'light':'dark')});
+const burger=document.getElementById('burgerBtn'),mNav=document.getElementById('mobileNav');
+burger.addEventListener('click',()=>mNav.classList.toggle('open'));
+mNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mNav.classList.remove('open')));
+const ITEMS=['Шеф-повар','Бренд-шеф','★ Michelin','Алматы','9+ лет опыта','Правильное питание','TastyAlmaty','Разработка меню','Запуск ресторанов','Обучение команд','Ресторанный консалтинг','Eat&Fit','ХБК Аксай','Горыныч ★','Авторская кухня','Mod · Koke · Yourta · Little Brazil · Olly'];
+const track=document.getElementById('tickerTrack');
+[...ITEMS,...ITEMS].forEach(item=>{const el=document.createElement('span');el.className='ticker-item';el.textContent=item;track.appendChild(el)});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}})},{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
